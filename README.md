@@ -1,23 +1,13 @@
-Для установки пакетов используйте команду npm install
+# SongBird game
+### deploy:
 
-## Команды
+### Features:
 
-### Запуск сервера для разработки
-```
-npm run start
-```
+- Adaptive & Responsive design
+- Custom audio player
+- Option to change language
+- Animations
+- Gallery with all birds (description and voice)
+- Play audio and visual display of the correctness of the answers
 
-### Сборка проекта без оптимизации
-```
-npm run dev
-```
 
-### Сборка проекта с оптимизацией
-```
-npm run prod
-```
-
-### Очистка папки dist
-```
-npm run clear
-```
