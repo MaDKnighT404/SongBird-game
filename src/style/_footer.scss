@@ -1,0 +1,84 @@
+.footer {
+  background: black;
+
+  &__wrapper {
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media screen and (max-width: 880px) {
+      height: 5vh;
+    }
+  }
+
+  &__link {
+    width: 140px;
+    height: 140px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+
+    @media screen and (max-width: 880px) {
+      margin: 0;
+    }
+  }
+
+  &__logo-course {
+    width: 100%;
+    transform: scale(0.8);
+    transition: .2s ease-in;
+    background: url(../src/img/rs_school_logo.svg) no-repeat;
+
+    @media screen and (max-width: 880px) {
+      transform: scale(0.5);
+    }
+
+    &:hover {
+      transform: scale(0.9);
+      background: url(../src/img/rs_school_logo_active.svg) no-repeat;
+
+      @media screen and (max-width: 880px) {
+        transform: scale(0.6);
+      }
+    }
+  }
+
+  &__logo-github {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.5);
+    transition: .2s ease-in;
+    background: url(../src/img/github_logo.svg) no-repeat center top;
+    background-size: cover ;
+
+    @media screen and (max-width: 880px) {
+      transform: scale(0.30);
+    }
+
+    &:hover {
+      transform: scale(0.6);
+      background: url(../src/img/github_logo_active.svg) no-repeat center top;
+      background-size: cover;
+
+      @media screen and (max-width: 880px) {
+        transform: scale(0.40);
+      }
+    }
+  }
+
+  &__year {
+    font-size: 1.5rem;
+    color: $text;
+    user-select: none;
+    font-family: 'Montserrat';
+
+    @media screen and (max-width: 880px) {
+      font-size: 1rem;
+    }
+  }
+
+
+}

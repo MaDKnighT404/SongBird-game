@@ -1,0 +1,219 @@
+.bird-question {
+  background: $background;
+  grid-area: question;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 680px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+  }
+
+  &__image {
+    width: 200px;
+    height: 130px;
+    margin: 15px 30px;
+    border: 2px solid rgba(255, 174, 0, 0.6);
+    border-radius: 10px;
+    transition: .3s ease-in;
+    
+    @media screen and (max-width: 680px) {
+      margin: 15px 30px 0;
+      width: 170px;
+      height: 100px;
+    }
+  }
+}
+
+.container {
+  width: 80%;
+  height: 80%;
+  margin-left: 3rem;
+
+  @media screen and (max-width: 1200px) {
+    margin-left: 2.5rem;
+  }
+
+  @media screen and (max-width: 880px) {
+    margin-left: 0rem;
+  }
+
+  @media screen and (max-width: 680px) {
+    height: 30%;
+  }
+
+  &__bird-name {
+    width: 90%;
+    line-height: 3rem;
+    border-bottom: 1px solid rgba(255, 174, 0, 0.7);
+    padding: 0 20px;
+    color: $text;
+    user-select: none;
+
+
+    @media screen and (max-width: 680px) {
+      width: 100%;
+      line-height: 2.5rem;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .sound-box {
+    width: 90%;
+    display: flex;
+    height: 4vh;
+    align-items: center;
+    margin-top: 1rem;
+
+    @media screen and (max-width: 680px) {
+      margin-top: 0.5rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    &__playback-btn {
+      margin-right: 2rem;
+      min-width: 40px;
+      min-height: 40px;
+      background: url(../src/img/play_button.svg) no-repeat;
+      cursor: pointer;
+      transition: 0.2s ease-in;
+
+      @media screen and (max-width: 680px) {
+        margin-right: 1.2rem;
+        min-width: 30px;
+        min-height: 30px;
+      }
+    }
+
+    &__pause-btn {
+      transition: 0.2s ease-in;
+      background: url(../src/img/pause_button.svg) no-repeat;
+    }
+
+    .progress {
+      position: relative;
+      margin-top: 18px;
+
+      @media screen and (max-width: 480px) {
+        margin-top: 15px;
+      }
+
+      &__timebar {
+        width: 300px;
+        height: 10px;
+        background: #c0b73569;
+        border-radius: 10px;
+        cursor: pointer;
+    
+        @media screen and (max-width: 1024px) {
+          width: 150px;
+        }
+
+        @media screen and (max-width: 880px) {
+          width: 120px;
+        }
+
+        @media screen and (max-width: 680px) {
+          width: 150px;
+        }
+
+        @media screen and (max-width: 480px) {
+          width: 80px;
+        }
+    
+        &::-webkit-progress-bar {
+          background:#c0b73569;
+          border-radius: 10px;
+        }
+    
+        &::-webkit-progress-value {
+          background:#60d443;
+          border-radius: 10px;
+        }
+      }
+
+      &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background:#ffae00;
+        transform: translate(-50%,0);
+        cursor: pointer; 
+        background:#fcc346;
+      }
+
+      .time-wrapper {
+        color: $text;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 480px) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    &__volume-image {
+      margin-left: 3rem;
+      min-width: 40px;
+      min-height: 40px;
+      background: url(../src/img/volume_up.svg) no-repeat;
+      background-size: 100%;
+      cursor: pointer;
+      transition: 0.2s ease-in;
+
+      @media screen and (max-width: 880px) {
+        margin-left: 1rem;
+      }
+
+      @media screen and (max-width: 680px) {
+        min-width: 30px;
+        min-height: 30px;
+      }
+    }
+
+    &__mute-image {
+      background: url(../src/img/volume_mute.svg) no-repeat;
+      background-size: 100%;
+    }
+
+    &__volume {
+      -webkit-appearance: none;
+      margin-right: 15px;
+      width: 100px;
+      height: 10px;
+      background: #c0b73569;
+      border-radius: 10px;
+      margin-left: .5rem;
+
+      @media screen and (max-width: 880px) {
+        width: 80px;
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 60px;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        background: orange;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+

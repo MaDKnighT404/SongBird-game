@@ -1,0 +1,45 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  font-family: 'Bellota', cursive;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  background: #39613a;
+
+  .wrapper {
+    width: 1600px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1650px) {
+      width: 1170px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 1000px;
+    }
+
+    @media screen and (max-width: 1023px) {
+      width: 850px;
+    }
+
+    @media screen and (max-width:880px) {
+      width: 650px;
+    }
+
+    @media screen and (max-width: 680px) {
+      width: calc(320px + (660 - 320) * ((100vw - 320px) / (680 - 320)));
+      padding: 0 10px ;
+    }
+  }
+
+ &_gallery {
+  overflow:scroll;
+ }
+}
+

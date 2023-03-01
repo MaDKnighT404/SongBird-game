@@ -1,0 +1,49 @@
+{
+
+  "name": "songbird",
+  "version": "1.0.0",
+  "description": "Для установки пакетов используйте команду npm install",
+
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "dev": "webpack",
+    "prod": "webpack --node-env=production",
+
+    "clear": "rd /s /q Songbird"
+  },
+  "keywords": [],
+  "author": "MaDKnight404",
+
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "html-loader": "^3.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "image-webpack-loader": "^8.1.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
+    "postcss-preset-env": "^7.7.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/madknight404-JSFE2022Q3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/madknight404-JSFE2022Q3/issues"
+  },
+  "homepage": "https://github.com/rolling-scopes-school/madknight404-JSFE2022Q3#readme"
+}

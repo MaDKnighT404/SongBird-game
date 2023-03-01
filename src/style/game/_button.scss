@@ -1,0 +1,11 @@
+.game__button {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background: $background;
+  grid-area: button;
+  color: $text; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s ease-in;
+}

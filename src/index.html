@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link type="image/x-icon" href="./img/favicon/favicon.ico" rel="shortcut icon">
+  <link type="Image/x-icon" href="./img/favicon/favicon.ico" rel="icon">
+  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#efefef">
+
+  <title>Songbird</title>
+</head>
+<body class="body">
+
+  <header class="header">
+    <button class="language header__language-btn"><img class="language__image" src="./img/ru_icon.png" data alt="language-choose"></button>
+    <div class="wrapper header__wrapper">
+      <img class="header__logo" src="./img/empty.png" alt="Application-logo"></img>
+      <nav class="header__nav">
+        <ul class="menu header__menu">
+          <li class="menu__item menu__item_selected"><a class="menu__link" href="#" data-lang="main">Главная</a></li>
+          <li class="menu__item"><a class="menu__link" href="#" data-lang="game">Игра</a></li>
+          <li class="menu__item"><a class="menu__link" href="gallery.html" data-lang="gallery">Галерея</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="main__substrate"></div>
+    <video class="main__forest" autoplay muted loop>
+     <source src="./video/background_video.mp4" type="video/mp4">
+    </video>
+    <video class="main__bird main__bird_hide" autoplay muted loop>
+      <source src="./video/background_video2.mp4" type="video/mp4">
+    </video>
+    <div class="wrapper main__wrapper">
+    <section class="greeting">
+      <h1 class="greeting__title" data-lang="greetingTitle">Добро пожаловать в игру Songbird!</h1>
+      <h2 class="greeting__rules-title" data-lang="greetingRules">Основные правила:</h2>
+      <ul class="list greeting__rules">
+        <li class="list__item" data-lang="greetingRules2">вам предстоит угадать название птицы основываясь на предоставленной записи её голоса.</li>
+        <li class="list__item" data-lang="greetingRules3">всего в игре будет 6 вопросов.</li>
+        <li class="list__item" data-lang="greetingRules4">за правильный ответ можно заработать максимум 5 баллов.</li> 
+        <li class="list__item" data-lang="greetingRules5">в случае неправильного ответа максимальный балл уменьшается на 1.</li>
+        <li class="list__item" data-lang="greetingRules6">по окончанию игры отобразится таблица с результами.</li>
+      </ul>
+      <button class="greeting__btn-start" data-lang="play">Начать игру</button>
+    </section>
+
+    <section class="game game_hide">
+      <article class="top-panel game__top-panel">
+        <div class="score"><span class="score__text" data-lang="score">Счёт:</span><span class="score__number"></span></div>
+        <ul class="questions top-panel__questions">
+          <li class="questions__item questions__item_selected" data-lang="warm-up">Разминка</li>
+          <li class="questions__item" data-lang="passeriformes">Воробьиные</li>
+          <li class="questions__item" data-lang="forest-birds">Лесные птицы</li>
+          <li class="questions__item" data-lang="songbirds">Певчие птицы</li>
+          <li class="questions__item" data-lang="predator-birds">Хищные птицы</li>
+          <li class="questions__item" data-lang="sea-birds">Морские птицы</li>
+        </ul>
+      </article>
+      <article class="bird-question game__bird-question">
+        <img class="bird-question__image" src="./img/secret_bird.png" alt="bird">
+        <div class="container bird-question__container">
+          
+        </div>
+      </article>
+      <article class="bird-answer game__bird-answer">
+        <ul class="answers bird-answer__list">
+          <li class="answers__item"><span class="answers__dot"></span><span>Ворон</span></li>
+          <li class="answers__item"><span class="answers__dot"></span><span>Журавль</span></li>
+          <li class="answers__item"><span class="answers__dot"></span><span>Ласточка</span></li>
+          <li class="answers__item"><span class="answers__dot"></span><span>Козодой</span></li>
+          <li class="answers__item"><span class="answers__dot"></span><span>Кукушка</span></li>
+          <li class="answers__item"><span class="answers__dot"></span><span>Синица</span></li>
+        </ul>
+      </article>
+      <article class="bird-description game__bird-description">
+        <div class="bird-description__task" data-lang="description-task">
+          Прослушайте запись пения неизвестной птицы, после чего попытайтесь угадать её название из списка. 
+        </div>
+      </article>
+      <div class="game__button" data-lang="next-question">Следующий вопрос</div>
+    </section> 
+
+    <section class="results results_hide">
+      <div class="text results__text">
+        <h3 class="text__title" data-lang="results-title">Поздравляем!</h3>
+        <div class="text__message">Вы прошли викторину и набрали <span class="text__score"></span> из 30 возможных баллов!</div>
+      </div>
+      <button class="results__button" data-lang="results-btn">Попробовать еще раз!</button>
+    </section>
+  </div>
+  </main>  
+  <footer class="footer">
+    <div class="wrapper footer__wrapper">
+      <a class ="footer__link" href="https://github.com/MaDKnighT404"><img class="footer__logo-github" src="./img/empty.png" alt="Github-logo"></img></a>
+      <span class="footer__year">2022</span> 
+      <a class ="footer__link" href="https://rs.school/js/"><img class="footer__logo-course" src="./img/empty.png" alt="Course-logo"></img></a>
+    </div>
+  </footer>
+  <audio class='correct-answer' src="./audio/correct_answer.mp3"></audio>
+  <audio class='wrong-answer' src="./audio/wrong_answer.mp3"></audio>
+
+</body>
+</html>
+
