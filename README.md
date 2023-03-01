@@ -1,5 +1,5 @@
 # SongBird game
-### deploy:
+### deploy: https://madknight404.github.io/SongBird-game/Songbird/
 
 ### Features:
 
